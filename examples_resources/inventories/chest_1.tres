@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=9 format=3 uid="uid://bp0dwyu8fuk8q"]
+
+[ext_resource type="Script" uid="uid://vqjtxrttu8f4" path="res://addons/p0nni_inventory_system/scripts/inventory_system/inventory.gd" id="1_cf881"]
+[ext_resource type="Script" uid="uid://b485g0qmtlnlw" path="res://addons/p0nni_inventory_system/scripts/inventory_system/item_stack.gd" id="2_ne47p"]
+[ext_resource type="Resource" uid="uid://3keqj6a0g056" path="res://addons/p0nni_inventory_system/examples_resources/items/apple.tres" id="3_bo5nl"]
+[ext_resource type="Resource" uid="uid://uaxohlhijnme" path="res://addons/p0nni_inventory_system/examples_resources/items/ring.tres" id="4_cljji"]
+[ext_resource type="Resource" uid="uid://bbcdm50eol5am" path="res://addons/p0nni_inventory_system/examples_resources/items/stick.tres" id="5_d00mr"]
+
+[sub_resource type="Resource" id="Resource_j4bwh"]
+script = ExtResource("2_ne47p")
+item = ExtResource("3_bo5nl")
+quantity = 4
+metadata/_custom_type_script = "uid://b485g0qmtlnlw"
+
+[sub_resource type="Resource" id="Resource_cf881"]
+script = ExtResource("2_ne47p")
+item = ExtResource("4_cljji")
+quantity = 1
+metadata/_custom_type_script = "uid://b485g0qmtlnlw"
+
+[sub_resource type="Resource" id="Resource_tn8xj"]
+script = ExtResource("2_ne47p")
+item = ExtResource("5_d00mr")
+quantity = 15
+metadata/_custom_type_script = "uid://b485g0qmtlnlw"
+
+[resource]
+script = ExtResource("1_cf881")
+uid = "CHEST HOUSE"
+stacks = Array[ExtResource("2_ne47p")]([SubResource("Resource_j4bwh"), SubResource("Resource_cf881"), SubResource("Resource_tn8xj")])
+metadata/_custom_type_script = "uid://vqjtxrttu8f4"

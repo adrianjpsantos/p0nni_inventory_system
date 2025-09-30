@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bbcdm50eol5am"]
+
+[ext_resource type="Script" uid="uid://dm45o5ig7jl16" path="res://addons/p0nni_inventory_system/scripts/inventory_system/item.gd" id="1_jnagr"]
+
+[resource]
+script = ExtResource("1_jnagr")
+name = "Stick"
+max_per_stack = 20
+metadata/_custom_type_script = "uid://dm45o5ig7jl16"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://3keqj6a0g056"]
+
+[ext_resource type="Script" uid="uid://dm45o5ig7jl16" path="res://addons/p0nni_inventory_system/scripts/inventory_system/item.gd" id="1_pcr06"]
+
+[resource]
+script = ExtResource("1_pcr06")
+name = "Apple"
+max_per_stack = 5
+metadata/_custom_type_script = "uid://dm45o5ig7jl16"

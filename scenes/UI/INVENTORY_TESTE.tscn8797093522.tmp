@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://be51dw4dalvv2"]
+
+[ext_resource type="Script" uid="uid://dgk867pkb7e04" path="res://addons/inventory-system/scripts/example_ui/inventories_view.gd" id="1_k15jt"]
+[ext_resource type="PackedScene" uid="uid://cx0euevbm6ld5" path="res://addons/inventory-system/examples/scenes/UI/inventory_panel.tscn" id="2_ixlak"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_k15jt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1157.0
+offset_bottom = 651.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="PrimaryPanel" parent="HBoxContainer" instance=ExtResource("2_ixlak")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SecondaryPanel" parent="HBoxContainer" instance=ExtResource("2_ixlak")]
+layout_mode = 2
+size_flags_horizontal = 3

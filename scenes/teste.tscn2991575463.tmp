@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxxrgje5xsqbp"]
+
+[ext_resource type="Script" uid="uid://c52t6v5cf4ipj" path="res://examples/scenes/teste.gd" id="1_78dw8"]
+[ext_resource type="Script" uid="uid://10uqr5u1dore" path="res://scripts/inventory_system/inventory_container.gd" id="1_fjxca"]
+[ext_resource type="Resource" uid="uid://788h2v6w2pj1" path="res://examples/inventories/player_inventory.tres" id="3_glg0i"]
+[ext_resource type="Resource" uid="uid://bp0dwyu8fuk8q" path="res://examples/inventories/chest_1.tres" id="4_xqu6y"]
+[ext_resource type="PackedScene" uid="uid://be51dw4dalvv2" path="res://examples/scenes/INVENTORY_TESTE.tscn" id="5_xqu6y"]
+
+[sub_resource type="Environment" id="Environment_78dw8"]
+
+[node name="Node" type="Node3D"]
+script = ExtResource("1_78dw8")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Camera3D"]
+environment = SubResource("Environment_78dw8")
+
+[node name="PlayerInventory" type="Node3D" parent="."]
+script = ExtResource("1_fjxca")
+inventory = ExtResource("3_glg0i")
+metadata/_custom_type_script = "uid://10uqr5u1dore"
+
+[node name="ChestInventory" type="Node3D" parent="."]
+script = ExtResource("1_fjxca")
+inventory = ExtResource("4_xqu6y")
+metadata/_custom_type_script = "uid://10uqr5u1dore"
+
+[node name="Control" parent="." instance=ExtResource("5_xqu6y")]

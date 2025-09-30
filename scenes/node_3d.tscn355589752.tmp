@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp6g30p5gf4mq"]
+
+[ext_resource type="Script" uid="uid://10uqr5u1dore" path="res://scripts/inventory_container.gd" id="1_kvp0e"]
+[ext_resource type="Resource" uid="uid://bp0dwyu8fuk8q" path="res://examples/inventories/chest_1.tres" id="2_eruqu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eruqu"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_eruqu")
+
+[node name="InventoryContainer" type="Node3D" parent="Area3D"]
+script = ExtResource("1_kvp0e")
+inventory = ExtResource("2_eruqu")
+metadata/_custom_type_script = "uid://10uqr5u1dore"
