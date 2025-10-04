@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://nay0cnuuxe37"]
+
+[ext_resource type="Texture2D" uid="uid://bvpbou6sqjxri" path="res://addons/p0nni_inventory_system/godot_interface/icons/filter.svg" id="1_885p7"]
+
+[node name="Item" type="Button"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 54.0
+grow_horizontal = 2
+size_flags_vertical = 0
+text = "Apple"
+icon = ExtResource("1_885p7")

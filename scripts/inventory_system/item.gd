@@ -2,15 +2,17 @@
 extends Resource
 class_name Item
 
-enum ItemLayer {
-	Armor,
-	Consumible,
-	Misc
-}
-
-var layer: ItemLayer = ItemLayer.Misc
 @export var name : String
+@export var description: String
+@export var image : Texture2D
 @export var max_per_stack: int = 1
+@export var layer : String
 
-func is_equal(other_item: Item):
+func _init() -> void:
+	layer = "Misc"
+
+func is_equal(other_item: Item) -> bool:
 	return self.resource_path == other_item.resource_path
+	
+func get_layer_name() ->String:
+	return layer
