@@ -1,21 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjeigc8p30vxr"]
+[gd_scene load_steps=5 format=3 uid="uid://bjeigc8p30vxr"]
 
 [ext_resource type="Script" uid="uid://dk4cyfa3qs7rg" path="res://addons/p0nni_inventory_system/godot_interface/scripts/main_screen.gd" id="1_iqron"]
 [ext_resource type="Texture2D" uid="uid://bvpbou6sqjxri" path="res://addons/p0nni_inventory_system/godot_interface/icons/filter.svg" id="1_xs70c"]
-[ext_resource type="Script" uid="uid://drbopjoveklys" path="res://addons/p0nni_inventory_system/godot_interface/scripts/items_tab.gd" id="2_2p3cf"]
-[ext_resource type="Texture2D" uid="uid://djrelwwscnc3j" path="res://addons/p0nni_inventory_system/godot_interface/icons/search.svg" id="2_nqhm3"]
-[ext_resource type="Texture2D" uid="uid://cecxn1t2xe8et" path="res://addons/p0nni_inventory_system/godot_interface/icons/sort.svg" id="4_2p3cf"]
-[ext_resource type="Texture2D" uid="uid://cawc456ja8vf5" path="res://addons/script-ide/icon/constant.svg" id="6_4fk3p"]
+[ext_resource type="PackedScene" uid="uid://cugsopnxshpc0" path="res://addons/p0nni_inventory_system/godot_interface/items_tab.tscn" id="2_05106"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs70c"]
 bg_color = Color(0.10038897, 1.7309021e-05, 0.11500787, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fmpgv"]
-bg_color = Color(0.18588951, 0.43543878, 0.16249049, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -54,73 +44,13 @@ size_flags_horizontal = 3
 
 [node name="TabContainer" type="TabContainer" parent="PanelContainer/MarginContainer/HSplitContainer/Left"]
 layout_mode = 2
-current_tab = 0
+current_tab = 1
 
-[node name="Items" type="MarginContainer" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer" node_paths=PackedStringArray("filter_items_name", "filter_items_layer_dropdown", "item_list")]
+[node name="Items" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer" instance=ExtResource("2_05106")]
+visible = false
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-script = ExtResource("2_2p3cf")
-filter_items_name = NodePath("VBoxContainer/HSplitContainer/FilterText")
-filter_items_layer_dropdown = NodePath("VBoxContainer/HSplitContainer/FilterLayerMenu")
-item_list = NodePath("VBoxContainer/ScrollContainer/ItemList")
-metadata/_tab_index = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items"]
-layout_mode = 2
-
-[node name="HSplitContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items/VBoxContainer"]
-layout_mode = 2
-
-[node name="FilterText" type="LineEdit" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items/VBoxContainer/HSplitContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-placeholder_text = "Filtrar Items"
-right_icon = ExtResource("2_nqhm3")
-
-[node name="FilterLayerMenu" type="MenuButton" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items/VBoxContainer/HSplitContainer"]
-layout_mode = 2
-icon = ExtResource("1_xs70c")
-icon_alignment = 1
-item_count = 3
-popup/item_0/text = "All"
-popup/item_0/id = 0
-popup/item_1/text = "Misc"
-popup/item_1/id = 1
-popup/item_2/text = "Tools"
-popup/item_2/id = 2
-
-[node name="ReloadButton" type="Button" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items/VBoxContainer/HSplitContainer"]
-layout_mode = 2
-icon = ExtResource("4_2p3cf")
-
-[node name="Button" type="Button" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items/VBoxContainer/HSplitContainer"]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_fmpgv")
-icon = ExtResource("6_4fk3p")
-
-[node name="HSeparator2" type="HSeparator" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="ItemList" type="ItemList" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer/Items/VBoxContainer/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-auto_height = true
 
 [node name="Inventories" type="MarginContainer" parent="PanelContainer/MarginContainer/HSplitContainer/Left/TabContainer"]
-visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10

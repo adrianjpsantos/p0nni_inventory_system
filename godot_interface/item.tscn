@@ -8,5 +8,6 @@ anchor_right = 1.0
 offset_bottom = 54.0
 grow_horizontal = 2
 size_flags_vertical = 0
+toggle_mode = true
 text = "Apple"
 icon = ExtResource("1_885p7")

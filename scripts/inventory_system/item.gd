@@ -6,13 +6,7 @@ class_name Item
 @export var description: String
 @export var image : Texture2D
 @export var max_per_stack: int = 1
-@export var layer : String
-
-func _init() -> void:
-	layer = "Misc"
+@export var layer : ItemLayers.ItemType = ItemLayers.ItemType.MISC
 
 func is_equal(other_item: Item) -> bool:
 	return self.resource_path == other_item.resource_path
-	
-func get_layer_name() ->String:
-	return layer

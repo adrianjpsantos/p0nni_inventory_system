@@ -1,63 +1,25 @@
 @tool
 extends EditorPlugin
-
-
-const MainPanel = preload("res://addons/p0nni_inventory_system/godot_interface/main.tscn")
-const MAIN_ICON = preload("res://addons/p0nni_inventory_system/godot_interface/icons/main.svg")
-
-var main_panel_instance
-
+	
+var item_tab_dock: Control
+var item_inspector_plugin: EditorInspectorPlugin
 
 func _enter_tree():
-	main_panel_instance = MainPanel.instantiate()
-	# Add the main panel to the editor's main viewport.
-	EditorInterface.get_editor_main_screen().add_child(main_panel_instance)
-	# Hide the main panel. Very much required.
-	_make_visible(false)
-
+	# Carrega a cena do seu painel Dock (que contém a ItemList)
+	var items_tab_scene = preload("res://addons/p0nni_inventory_system/godot_interface/items_tab.tscn")
+	item_tab_dock = items_tab_scene.instantiate()
+	
+	# Adiciona o Dock à área de editor
+	add_control_to_dock(DOCK_SLOT_LEFT_UR, item_tab_dock,null)
+	
+	# --- ADIÇÃO DO EDITOR INSPECTOR PLUGIN ---
+	# Instancia o script que ensina o Inspector a editar o Item (Opcional, mas recomendado)
+	item_inspector_plugin = preload("res://addons/p0nni_inventory_system/godot_interface/scripts/item_editor_plugin.gd").new()
+	add_inspector_plugin(item_inspector_plugin)
 
 func _exit_tree():
-	if main_panel_instance:
-		main_panel_instance.queue_free()
-
-
-func _has_main_screen():
-	return true
-
-
-func _make_visible(visible):
-	if main_panel_instance:
-		main_panel_instance.visible = visible
-
-
-func _get_plugin_name():
-	return "Inventories"
-
-
-func _get_plugin_icon():
-	const ICON_SIZE = 16
- # 1. Carrega o SVG original como uma Texture2D
-	var svg_texture: Texture2D = MAIN_ICON
+	# Remove tudo para limpar o editor
+	remove_control_from_docks(item_tab_dock)
+	item_tab_dock.queue_free()
 	
-	# 2. Verifica se o SVG precisa ser redimensionado e se é um Texture2D (deve ser após o preload)
-	if svg_texture:
-		# Se você quer garantir o tamanho exato, pode criar um Image a partir da textura
-		# e depois criar um ImageTexture redimensionada.
-		
-		# A maneira mais simples (e que funciona com preloads) é usar a função de 
-		# redimensionamento da Image
-		var image = svg_texture.get_image()
-		
-		# Redimensiona a imagem se o tamanho não for o desejado
-		if image.get_width() != ICON_SIZE or image.get_height() != ICON_SIZE:
-			# Redimensiona a imagem para o tamanho desejado (ex: 32x32)
-			# Usa INTERPOLATE_NEAREST para imagens pixeladas, ou INTERPOLATE_LINEAR
-			# para SVGs ou imagens mais suaves.
-			image.resize(ICON_SIZE, ICON_SIZE, Image.INTERPOLATE_BILINEAR)
-			
-			# Converte a Image redimensionada de volta para um ImageTexture
-			var new_texture = ImageTexture.create_from_image(image)
-			return new_texture
-			
-		return svg_texture # Retorna a original se já estiver no tamanho certo
-	return null
+	remove_inspector_plugin(item_inspector_plugin)
