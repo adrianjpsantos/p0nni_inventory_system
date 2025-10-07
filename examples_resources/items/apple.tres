@@ -6,4 +6,5 @@
 script = ExtResource("1_pcr06")
 name = "Apple"
 max_per_stack = 5
+layer = 7
 metadata/_custom_type_script = "uid://dm45o5ig7jl16"

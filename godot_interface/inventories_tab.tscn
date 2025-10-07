@@ -1,27 +1,27 @@
-[gd_scene load_steps=9 format=3 uid="uid://cugsopnxshpc0"]
+[gd_scene load_steps=9 format=3 uid="uid://b7eqm5misk164"]
 
-[ext_resource type="Script" uid="uid://drbopjoveklys" path="res://addons/p0nni_inventory_system/godot_interface/scripts/items_tab.gd" id="1_h88j8"]
-[ext_resource type="Texture2D" uid="uid://djrelwwscnc3j" path="res://addons/p0nni_inventory_system/godot_interface/icons/search.svg" id="2_yrej8"]
-[ext_resource type="Texture2D" uid="uid://bvpbou6sqjxri" path="res://addons/p0nni_inventory_system/godot_interface/icons/filter.svg" id="3_m7yw8"]
-[ext_resource type="Texture2D" uid="uid://cecxn1t2xe8et" path="res://addons/p0nni_inventory_system/godot_interface/icons/sort.svg" id="4_i782e"]
-[ext_resource type="Texture2D" uid="uid://rkd4f51cp318" path="res://addons/p0nni_inventory_system/godot_interface/icons/refresh.svg" id="5_yrej8"]
-[ext_resource type="Texture2D" uid="uid://cjfjfj5qp42ot" path="res://resources/images/items/apple.svg" id="6_hxdhh"]
-[ext_resource type="Texture2D" uid="uid://bcytn0mh6nqvf" path="res://resources/images/items/bread.svg" id="7_3haqk"]
-[ext_resource type="Texture2D" uid="uid://cqovkca1xcj4d" path="res://resources/images/items/hammer.svg" id="8_b3fbh"]
+[ext_resource type="Script" uid="uid://bg5o2hqlwydam" path="res://addons/p0nni_inventory_system/godot_interface/scripts/inventory_tab.gd" id="1_6ecwv"]
+[ext_resource type="Texture2D" uid="uid://djrelwwscnc3j" path="res://addons/p0nni_inventory_system/godot_interface/icons/search.svg" id="2_7dsg3"]
+[ext_resource type="Texture2D" uid="uid://bvpbou6sqjxri" path="res://addons/p0nni_inventory_system/godot_interface/icons/filter.svg" id="3_fa6vt"]
+[ext_resource type="Texture2D" uid="uid://cecxn1t2xe8et" path="res://addons/p0nni_inventory_system/godot_interface/icons/sort.svg" id="4_0tfie"]
+[ext_resource type="Texture2D" uid="uid://rkd4f51cp318" path="res://addons/p0nni_inventory_system/godot_interface/icons/refresh.svg" id="5_im3qf"]
+[ext_resource type="Texture2D" uid="uid://cjfjfj5qp42ot" path="res://resources/images/items/apple.svg" id="7_2bxwu"]
+[ext_resource type="Texture2D" uid="uid://bcytn0mh6nqvf" path="res://resources/images/items/bread.svg" id="8_agldo"]
+[ext_resource type="Texture2D" uid="uid://cqovkca1xcj4d" path="res://resources/images/items/hammer.svg" id="9_wkuse"]
 
-[node name="Items" type="Control" node_paths=PackedStringArray("filter_items_name", "filter_items_layer_dropdown", "orderer_items_button", "reload_items_button", "item_list")]
+[node name="Inventories" type="Control" node_paths=PackedStringArray("filter_inventories_name", "filter_inventories_layer_dropdown", "orderer_inventories_button", "reload_inventories_button", "inventories_list")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_h88j8")
-filter_items_name = NodePath("VBoxContainer/HSplitContainer/FilterText")
-filter_items_layer_dropdown = NodePath("VBoxContainer/HSplitContainer/FilterLayerMenu")
-orderer_items_button = NodePath("VBoxContainer/HSplitContainer/SortButton")
-reload_items_button = NodePath("VBoxContainer/HSplitContainer/ReloadButton")
-item_list = NodePath("VBoxContainer/ScrollContainer/ItemList")
+script = ExtResource("1_6ecwv")
+filter_inventories_name = NodePath("VBoxContainer/HSplitContainer/FilterText")
+filter_inventories_layer_dropdown = NodePath("VBoxContainer/HSplitContainer/FilterLayerMenu")
+orderer_inventories_button = NodePath("VBoxContainer/HSplitContainer/SortButton")
+reload_inventories_button = NodePath("VBoxContainer/HSplitContainer/ReloadButton")
+inventories_list = NodePath("VBoxContainer/ScrollContainer/ItemList")
 metadata/_tab_index = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -39,11 +39,11 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "Filtrar Items"
-right_icon = ExtResource("2_yrej8")
+right_icon = ExtResource("2_7dsg3")
 
 [node name="FilterLayerMenu" type="MenuButton" parent="VBoxContainer/HSplitContainer"]
 layout_mode = 2
-icon = ExtResource("3_m7yw8")
+icon = ExtResource("3_fa6vt")
 flat = false
 icon_alignment = 1
 item_count = 14
@@ -78,12 +78,12 @@ popup/item_13/id = 13
 
 [node name="SortButton" type="Button" parent="VBoxContainer/HSplitContainer"]
 layout_mode = 2
-icon = ExtResource("4_i782e")
+icon = ExtResource("4_0tfie")
 flat = true
 
 [node name="ReloadButton" type="Button" parent="VBoxContainer/HSplitContainer"]
 layout_mode = 2
-icon = ExtResource("5_yrej8")
+icon = ExtResource("5_im3qf")
 flat = true
 
 [node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
@@ -105,8 +105,8 @@ size_flags_vertical = 3
 auto_height = true
 item_count = 3
 item_0/text = "Pecado Original"
-item_0/icon = ExtResource("6_hxdhh")
+item_0/icon = ExtResource("7_2bxwu")
 item_1/text = "Pao da vida 52"
-item_1/icon = ExtResource("7_3haqk")
+item_1/icon = ExtResource("8_agldo")
 item_2/text = "Hammer"
-item_2/icon = ExtResource("8_b3fbh")
+item_2/icon = ExtResource("9_wkuse")

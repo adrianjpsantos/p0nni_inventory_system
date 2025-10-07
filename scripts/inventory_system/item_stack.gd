@@ -56,3 +56,37 @@ func use_item():
 	quantity -= 1
 	reset()
 	
+## Sobrescreve o construtor nativo para uma impressão formatada.
+func _to_string() -> String:
+	var item_name = "Item Vazio (null)"
+	var item_type = "Tipo Desconhecido"
+	var item_max_stack = "N/A"
+	
+	if item:
+		# Tenta usar o nome do item e as propriedades
+		item_name = item.name
+		item_max_stack = str(item.max_per_stack)
+		
+		# Tenta obter o nome da enum da Layer para clareza
+		# (Requer que a enum Layers.Item esteja disponível)
+		var layer_value = item.layer
+		item_type = Layers.Item.keys()[layer_value]
+
+	
+	var info_string = \
+"""
+📦 == Pilha de Itens == 📦
+  Item:         %s
+  Quantidade:   %d
+  Empilhável:   %s
+  Layer:        %s
+========================
+""" % [
+		item_name,
+		quantity,
+		item_max_stack,
+		item_type
+	]
+	
+	return info_string
+	

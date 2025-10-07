@@ -77,7 +77,7 @@ func _apply_all_filters():
 				var item_layer = item.get("layer") # Ex: 3 (que seria o valor de "TOOL")
 				
 				# 2. CONVERSÃO CORRETA: Usa o valor int como índice no array de chaves do enum
-				var layer_name_to_compare = ItemLayers.ItemType.keys()[item_layer] # Ex: "TOOL"
+				var layer_name_to_compare = Layers.Item.keys()[item_layer] # Ex: "TOOL"
 				
 				print("Item Layer (INT): ", item_layer)
 				print("Layer Name (STRING): ", layer_name_to_compare)
@@ -194,7 +194,7 @@ func _update_list_view(resources_to_display: Array[Item]):
 func _populate_layer_dropdown():
 	# Este é um exemplo de como preencher o MenuButton (ajuste conforme a necessidade)
 	var popup = filter_items_layer_dropdown.get_popup()
-	var layers_keys = ItemLayers.ItemType.keys()
+	var layers_keys = Layers.Item.keys()
 	popup.clear()
 	popup.add_item("ALL")
 	for key in layers_keys:

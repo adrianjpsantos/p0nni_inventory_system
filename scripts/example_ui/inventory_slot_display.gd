@@ -33,7 +33,7 @@ func _update_visuals() -> void:
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 		if item_stack.item != null :
-			print("Slot with " + item_stack.item.name +" Clicked -- " )
+			print(item_stack)
 		else:
 			print("Slot Empty Clicked")
 		emit_signal("slot_clicked", self)

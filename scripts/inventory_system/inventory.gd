@@ -2,14 +2,10 @@
 extends Resource
 class_name Inventory
 
-enum InventoryLayer {
-	Misc,
-	Drop,
-	Player,
-	PlayerArmor
-}
 @export var uid : String = "NO ID"
-var layer = InventoryLayer.Misc
+@export var title: String = "NO TITLE"
+@export var custom_icon : Texture2D
+var layer = Layers.Inventory.SYSTEM_MISC
 @export var stacks : Array[ItemStack] = []
 
 signal inventory_changed
@@ -19,7 +15,7 @@ func is_uid_valid() -> bool:
 
 func print_inventory():
 	if uid == "NO ID" and OS.has_feature("editor"):
-		printerr("INVENTARIO " + InventoryLayer.find_key(layer) + " SEM ID! Corrija a inicialização. ")
+		printerr("INVENTARIO " + Layers.Inventory.find_key(layer) + " SEM ID! Corrija a inicialização. ")
 		
 func push_item_on_stacks(i: Item,qty: int) -> int:
 	var quantity_to_push: int = qty
