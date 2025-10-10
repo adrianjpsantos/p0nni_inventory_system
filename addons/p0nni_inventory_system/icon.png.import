@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b57phdhoqqxsp"
-path="res://.godot/imported/item.svg-b06433beaaf2982e4c9bd65f270fbfe0.ctex"
+uid="uid://d4at8p5nic57s"
+path="res://.godot/imported/icon.png-b4f947dbfd4e478369021a1f4e740d67.ctex"
 metadata={
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/p0nni_inventory_system/scripts/script_icons/item.svg"
-dest_files=["res://.godot/imported/item.svg-b06433beaaf2982e4c9bd65f270fbfe0.ctex"]
+source_file="res://addons/p0nni_inventory_system/addons/p0nni_inventory_system/icon.png"
+dest_files=["res://.godot/imported/icon.png-b4f947dbfd4e478369021a1f4e740d67.ctex"]
 
 [params]
 
@@ -39,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=0.02
-editor/scale_with_editor_scale=true
-editor/convert_colors_with_editor_theme=false

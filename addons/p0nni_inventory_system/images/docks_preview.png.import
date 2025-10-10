@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cecxn1t2xe8et"
-path="res://.godot/imported/sort.svg-4e0fe05e722533dcca45cec9d53c6f2a.ctex"
+uid="uid://gvbcp2u6unxw"
+path="res://.godot/imported/docks_preview.png-dff9a7ea203d07926a825f305df9740b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/p0nni_inventory_system/godot_interface/icons/sort.svg"
-dest_files=["res://.godot/imported/sort.svg-4e0fe05e722533dcca45cec9d53c6f2a.ctex"]
+source_file="res://addons/p0nni_inventory_system/addons/p0nni_inventory_system/images/docks_preview.png"
+dest_files=["res://.godot/imported/docks_preview.png-dff9a7ea203d07926a825f305df9740b.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=0.25
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

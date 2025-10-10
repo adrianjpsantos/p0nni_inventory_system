@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cugsopnxshpc0"]
+[gd_scene load_steps=8 format=3 uid="uid://cugsopnxshpc0"]
 
 [ext_resource type="Script" uid="uid://drbopjoveklys" path="res://addons/p0nni_inventory_system/godot_interface/scripts/items_tab.gd" id="1_h88j8"]
 [ext_resource type="Texture2D" uid="uid://djrelwwscnc3j" path="res://addons/p0nni_inventory_system/godot_interface/icons/search.svg" id="2_yrej8"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://rkd4f51cp318" path="res://addons/p0nni_inventory_system/godot_interface/icons/refresh.svg" id="5_yrej8"]
 [ext_resource type="Texture2D" uid="uid://cjfjfj5qp42ot" path="res://resources/images/items/apple.svg" id="6_hxdhh"]
 [ext_resource type="Texture2D" uid="uid://bcytn0mh6nqvf" path="res://resources/images/items/bread.svg" id="7_3haqk"]
-[ext_resource type="Texture2D" uid="uid://cqovkca1xcj4d" path="res://resources/images/items/hammer.svg" id="8_b3fbh"]
 
 [node name="Items" type="Control" node_paths=PackedStringArray("filter_items_name", "filter_items_layer_dropdown", "orderer_items_button", "reload_items_button", "item_list")]
 layout_mode = 3
@@ -103,10 +102,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 auto_height = true
-item_count = 3
+item_count = 2
 item_0/text = "Pecado Original"
 item_0/icon = ExtResource("6_hxdhh")
 item_1/text = "Pao da vida 52"
 item_1/icon = ExtResource("7_3haqk")
-item_2/text = "Hammer"
-item_2/icon = ExtResource("8_b3fbh")

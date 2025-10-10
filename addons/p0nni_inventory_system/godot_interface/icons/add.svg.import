@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvpbou6sqjxri"
-path="res://.godot/imported/filter.svg-5a7ed92cf7c5a2ce1a69f7eb818fe2e1.ctex"
+uid="uid://cl4728ss3kxv1"
+path="res://.godot/imported/add.svg-2723d9eab3914c069a926a106323c01f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/p0nni_inventory_system/godot_interface/icons/filter.svg"
-dest_files=["res://.godot/imported/filter.svg-5a7ed92cf7c5a2ce1a69f7eb818fe2e1.ctex"]
+source_file="res://addons/p0nni_inventory_system/addons/p0nni_inventory_system/godot_interface/icons/add.svg"
+dest_files=["res://.godot/imported/add.svg-2723d9eab3914c069a926a106323c01f.ctex"]
 
 [params]
 

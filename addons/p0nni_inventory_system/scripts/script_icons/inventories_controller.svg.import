@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djrelwwscnc3j"
-path="res://.godot/imported/search.svg-b72780356e69651a4775b93080135e58.ctex"
+uid="uid://dmtlem2xt5c1q"
+path="res://.godot/imported/inventories_controller.svg-99f1a98a6cd0891efdf0b70be25dfe0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/p0nni_inventory_system/godot_interface/icons/search.svg"
-dest_files=["res://.godot/imported/search.svg-b72780356e69651a4775b93080135e58.ctex"]
+source_file="res://addons/p0nni_inventory_system/addons/p0nni_inventory_system/scripts/script_icons/inventories_controller.svg"
+dest_files=["res://.godot/imported/inventories_controller.svg-99f1a98a6cd0891efdf0b70be25dfe0b.ctex"]
 
 [params]
 
@@ -38,6 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=0.25
+svg/scale=0.02
 editor/scale_with_editor_scale=false
 editor/convert_colors_with_editor_theme=false
