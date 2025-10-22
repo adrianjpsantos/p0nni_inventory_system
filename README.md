@@ -258,7 +258,7 @@ O sistema de UI de exemplo (`InventorySlotUI`, `InventoryPanel`) deve ser descar
 
 Para facilitar a criação e edição de `Items` e `Inventories`, o plugin adiciona dois novos Docks ao editor do Godot: "Items" e "Inventories".
 
-![Docks de Itens e Inventários](images/docks_preview.png)
+![Docks de Itens e Inventários](addons/p0nni_inventory_system/images/docks_preview.png)
 
 Esses painéis oferecem uma maneira visual e centralizada de gerenciar todos os seus recursos de inventário, evitando que você precise procurá-los em várias pastas.
 
